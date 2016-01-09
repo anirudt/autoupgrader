@@ -9,8 +9,8 @@ This is a walkthrough for a package which auto-upgrades the packages.
 #Steps
 Place the package makefile in package/feeds/upgrader/, route the link in feeds.conf.default, update the feed details and install it.
 ```
-$ mkdir package/feeds/packages/auto-upgrader
-$ vi package/feeds/packages/auto-upgrader/Makefile
+$ mkdir package/feeds/packages/autoupgrader
+$ vi package/feeds/packages/autoupgrader/Makefile
 # Write your package Makefile
 $ vi feeds.conf.default
 # Add the line
