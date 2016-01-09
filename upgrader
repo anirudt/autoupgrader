@@ -1,0 +1,21 @@
+#!/bin/sh /etc/rc.common
+# This is the init script, to be placed
+# at /etc/init.d/
+
+START=97
+STOP=97
+
+start() {
+  logger "upgrader-start"
+  /bin/find_upgrade.sh
+}
+
+stop() {
+  logger "upgrader-stop"
+}
+
+boot() {
+  sleep 20
+  logger "upgrader-boot"
+  /bin/find_upgrade.sh
+}
