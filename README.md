@@ -5,20 +5,12 @@ This is a walkthrough for a package which auto-upgrades the packages.
 - [Source file, upgrade script](find_upgrade.sh)
 - [Source file, init script](upgrader)
 - [Source makefile](Makefile)
-- [Package makefile](Makefile_main)
 
 #Steps
-Follow the usual same steps, write the source files, tar.xz them and place them in openwrt/dl.
-```
-# Assuming all source files are written into upgrader-1.3.1
-$ tar -Jcf upgrader-1.3.1.tar.xz upgrader-1.3.1
-$ sudo cp upgrader-1.3.1.tar.xz ../openwrt/dl/
-```
-
 Place the package makefile in package/feeds/upgrader/, route the link in feeds.conf.default, update the feed details and install it.
 ```
-$ mkdir feeds/package/upgrader
-$ vi feeds/package/upgrader/Makefile
+$ mkdir package/feeds/packages/auto-upgrader
+$ vi package/feeds/packages/auto-upgrader/Makefile
 # Write your package Makefile
 $ vi feeds.conf.default
 # Add the line
